@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ghost
+  namespace: ghost-blog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ghost
+  template:
+    metadata:
+      labels:
+        app: ghost
+    spec:
+      containers:
+        - name: ghost
+          image: "{{ .Values.ghost.image }}"
+          ports:
+            - containerPort: 2368
+          envFrom:
+            - configMapRef:
+                name: ghost-config
+          volumeMounts:
+            - name: ghost-storage
+              mountPath: /var/lib/ghost/content
+      volumes:
+        - name: ghost-storage
+          persistentVolumeClaim:
+            claimName: ghost-pvc

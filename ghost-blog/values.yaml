@@ -1,0 +1,19 @@
+ghost:
+  image: ghost:5.111.0
+  replicas: 1
+  service:
+    type: ClusterIP
+    port: 2368
+
+mysql:
+  image: mysql:8.0.41
+  replicas: 1
+  rootPassword: rootpassword
+  database: ghost
+  user: ghost
+  password: ghostpassword
+  service:
+    type: ClusterIP
+    port: 3306
+
+storageClass: standard

@@ -4,10 +4,10 @@ metadata:
   name: ghost
   namespace: ghost-blog
   annotations:
-    service.beta.kubernetes.io/aws-load-balancer-type: "nlb" # For AWS (if using AWS EKS)
+    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"  # AWS Network Load Balancer (NLB)
+    service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"  # Public-facing LoadBalancer
 spec:
   type: LoadBalancer
-  loadBalancerIP: 13.53.33.149  # Replace with your static IP (if supported by your cloud provider)
   ports:
     - port: 80
       targetPort: 2368

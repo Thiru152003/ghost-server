@@ -24,4 +24,4 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-prod
   tls: true
 
-storageClass: standard
+storageClass: gp3-csi

@@ -4,16 +4,9 @@ metadata:
   name: ghost-config
   namespace: ghost-blog
 data:
-  config.production.json: |
-    {
-      "url": "http://98.85.128.236",
-      "database": {
-        "client": "mysql",
-        "connection": {
-          "host": "mysql",
-          "user": "ghost",
-          "password": "ghostpassword",
-          "database": "ghostdb"
-        }
-      }
-    }
+  database__client: "mysql"
+  database__connection__host: "mysql"  # Change from "ghost-mysql" to "mysql"
+  database__connection__user: "ghost"
+  database__connection__password: "ghostpassword"
+  database__connection__database: "ghostdb"
+  url: "https://blog.cloudmasa.com"

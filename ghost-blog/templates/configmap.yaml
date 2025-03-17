@@ -5,8 +5,8 @@ metadata:
   namespace: ghost-blog
 data:
   database__client: "mysql"
-  database__connection__host: "ghost-mysql"  # ✅ Match MySQL service name
+  database__connection__host: "mysql"  # Change from "ghost-mysql" to "mysql"
   database__connection__user: "ghost"
   database__connection__password: "ghostpassword"
-  database__connection__database: "ghostdb"  # ✅ Match the database name in MySQL
+  database__connection__database: "ghostdb"
   url: "https://blog.cloudmasa.com"

@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ghost
-  namespace: ghost-blog
 spec:
   replicas: 1
   selector:
@@ -16,31 +15,23 @@ spec:
       containers:
         - name: ghost
           image: ghost:5.111.0
-          ports:
-            - containerPort: 2368
           env:
             - name: database__client
-              value: "mysql"
+              value: mysql
             - name: database__connection__host
-              value: "mysql"
+              value: mysql
             - name: database__connection__user
-              value: "ghost"
+              value: ghost
             - name: database__connection__password
-              value: "ghostpassword"
+              value: ghostpassword
             - name: database__connection__database
-              value: "ghostdb"
-            - name: url
-              value: "https://blog.cloudmasa.com"
+              value: ghostdb
+          ports:
+            - containerPort: 2368
           volumeMounts:
-            - name: ghost-config
-              mountPath: /var/lib/ghost/config.production.json
-              subPath: config.production.json
             - name: ghost-storage
               mountPath: /var/lib/ghost/content
       volumes:
-        - name: ghost-config
-          configMap:
-            name: ghost-config
         - name: ghost-storage
           persistentVolumeClaim:
             claimName: ghost-pvc

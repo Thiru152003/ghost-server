@@ -9,4 +9,4 @@ data:
   database__connection__user: "ghost"
   database__connection__password: "ghostpassword"
   database__connection__database: "ghostdb"
-  url: "https://blog.cloudmasa.com"
+  url: "http://blog.cloudmasa.com"

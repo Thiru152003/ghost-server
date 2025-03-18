@@ -7,7 +7,7 @@ metadata:
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb" # NLB for AWS
     service.beta.kubernetes.io/aws-load-balancer-scheme: "internet-facing"
-    service.beta.kubernetes.io/aws-load-balancer-eip-allocations: "eipalloc-0aaf36a1b25418b09,eipalloc-042e165c7723090e8"
+    service.beta.kubernetes.io/aws-load-balancer-eip-allocations: "eipalloc-09a6a244d350c06d7,eipalloc-09432c9ca125fbe19"
 spec:
   type: LoadBalancer # Ensure LoadBalancer type is set
   selector:

@@ -7,6 +7,8 @@ ghost:
   dbName: ghostdb
   dbHost: ghost-mysql
   dbPort: 3306
+  env:
+    url: "https://blog.cloudmasa.com"  # This should be here
 
 mysql:
   image: mysql:8.0.41

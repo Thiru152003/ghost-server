@@ -1,5 +1,5 @@
 ghost:
-  image: ghost:5.111.0
+  image: ghost:5.6.0
   storage: 10Gi
   host: blog.cloudmasa.com
   dbUser: ghost

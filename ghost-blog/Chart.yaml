@@ -3,4 +3,4 @@ name: ghost-blog
 description: A Helm chart for deploying Ghost with MySQL in Kubernetes
 type: application
 version: 1.0.0
-appVersion: "5.111.0"
+appVersion: "5.6.0"

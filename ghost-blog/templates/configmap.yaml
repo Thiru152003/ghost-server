@@ -10,5 +10,5 @@ data:
   database__connection__password: "ghostpassword"
   database__connection__database: "ghostdb"
   url: "http://blog.cloudmasa.com"
-  server_host: "http://blog.masacom.com"
-  server_port: "80"
+  server__host: "http://blog.masacom.com"
+  server__port: 80
